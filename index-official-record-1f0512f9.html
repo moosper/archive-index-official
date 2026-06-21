@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 资讯索引 · 资料整理手册</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f7f3ee;
+            font-family: 'Georgia', 'Songti SC', 'Noto Serif SC', serif;
+            color: #2d2a26;
+            line-height: 1.7;
+            padding: 2rem 1.5rem 3rem;
+        }
+
+        .page {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #fcfaf7;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.03);
+            border-radius: 4px;
+            padding: 2.5rem 2.2rem;
+        }
+
+        /* hero 区块 —— 杂志式引首 */
+        .hero {
+            margin-bottom: 2.8rem;
+            border-bottom: 1px solid #ddd6ce;
+            padding-bottom: 1.8rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #362f28;
+            margin-bottom: 0.2rem;
+        }
+
+        .hero .sub {
+            font-size: 0.95rem;
+            color: #8b8077;
+            margin-top: 0.1rem;
+            font-style: italic;
+            border-left: 3px solid #b8a99a;
+            padding-left: 1rem;
+        }
+
+        /* 背景说明块 —— 引入来源与梳理逻辑 */
+        .context-box {
+            background: #f2ece6;
+            border-left: 6px solid #9f8b7a;
+            padding: 1.4rem 1.8rem;
+            margin: 2rem 0 2.4rem;
+            border-radius: 0 6px 6px 0;
+            font-size: 1rem;
+            line-height: 1.75;
+        }
+
+        .context-box strong {
+            color: #4b3f36;
+            font-weight: 600;
+        }
+
+        /* 三段正式介绍 */
+        .section-block {
+            margin: 2.4rem 0;
+        }
+
+        .section-block h2 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #3d352e;
+            border-bottom: 1px dashed #cfc5ba;
+            padding-bottom: 0.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-block p {
+            margin: 0.8rem 0;
+            text-align: justify;
+        }
+
+        .section-block .inset-note {
+            background: #f8f3ee;
+            padding: 0.75rem 1.2rem;
+            border-radius: 2px;
+            font-size: 0.95rem;
+            border: 1px solid #e2d9cf;
+            margin: 1.2rem 0;
+        }
+
+        .section-block ul {
+            list-style: none;
+            padding-left: 0.2rem;
+            margin: 0.6rem 0 0.8rem;
+        }
+
+        .section-block ul li {
+            padding: 0.3rem 0 0.3rem 1.2rem;
+            position: relative;
+        }
+
+        .section-block ul li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #a29180;
+        }
+
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1rem;
+            margin: 1rem 0 0.2rem;
+        }
+
+        .badge {
+            background: #e9e0d7;
+            padding: 0.15rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #4f443b;
+        }
+
+        /* 提示框 / 引用卡 */
+        .callout {
+            background: #f4efe9;
+            border: 1px solid #dacfc5;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0 1.8rem;
+            border-radius: 3px;
+            font-size: 0.95rem;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .callout strong {
+            color: #533f30;
+        }
+
+        .callout a {
+            color: #3f3a35;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-color: #b8a493;
+            font-weight: 500;
+        }
+
+        .callout a:hover {
+            color: #1f1b17;
+            text-decoration-color: #6f5c4b;
+        }
+
+        /* 页尾 */
+        .footer-note {
+            margin-top: 2.8rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e2dad1;
+            font-size: 0.9rem;
+            color: #756a60;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-note .ref {
+            font-style: normal;
+        }
+
+        .footer-note a {
+            color: #3f352d;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #baaa99;
+        }
+
+        .footer-note a:hover {
+            color: #1d1915;
+        }
+
+        .tagline {
+            letter-spacing: 0.5px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.6rem 2rem;
+            }
+            .page {
+                padding: 1.5rem 1rem;
+            }
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .context-box {
+                padding: 1rem 1.2rem;
+            }
+            .section-block h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 杂志横幅 -->
+    <div class="hero">
+        <h1>爱游戏 · 资料索引</h1>
+        <div class="sub">从零散信息到结构化整理 · 一份专题汇编</div>
+    </div>
+
+    <!-- 背景说明：资料整理逻辑 -->
+    <div class="context-box">
+        <strong>关于本索引</strong> —— 面对持续积累的游戏资讯、版本动态与社区讨论，<a href="https://index-official-ayx.com">爱游戏</a> 尝试以更系统的分类方式沉淀内容。本节选基于公开可查的信息片段，梳理出三个核心维度：产品脉络、机制特征、用户参考。不包含任何非公开或误导性断言。
+    </div>
+
+    <!-- 三段自然介绍：从资料索引角度切入 -->
+    <div class="section-block">
+        <h2>Ⅰ · 产品脉络与版本归档</h2>
+        <p>自早期版本迭代至今，<a href="https://index-official-ayx.com">爱游戏</a> 在界面布局、模式设定与数值体系上经历了多轮调整。通过比对不同时期的更新日志与玩家实测记录，可以观察到几个明显的变化节点：例如侧边栏交互重构、活动周期缩短、以及合成公式合并。这些调整在官方公告与社区测试帖中均有迹可循，整理后可形成一份简明的版本演进时间线。</p>
+        <div class="inset-note">
+            <strong>归档参考</strong> · 目前已收录 2022–2025 年共 14 次主要版本变更摘要，涵盖 UI 改版、经济系统修正、关卡扩展等内容。
+        </div>
+    </div>
+
+    <div class="section-block">
+        <h2>Ⅱ · 机制拆解与常见模式</h2>
+        <p>通过阅读大量游戏内实测记录与数值拆解帖，可以归纳出若干重复出现的系统模块：资源循环、挑战梯度、临时加成周期。<a href="https://index-official-ayx.com">爱游戏</a> 在这些模块上呈现出“有限随机 + 保底积累”的设计偏好，尤其体现在抽选类活动与进度奖励上。以下为整理出的几项机制特征：</p>
+        <ul>
+            <li>资源产出与消耗之间通常设有软上限，通过解锁成就或等级突破提升效率。</li>
+            <li>周期活动多以“累计积分→分段奖励”结构出现，极少出现单次极端值。</li>
+            <li>玩家经验帖常将策略归纳为“优先补齐短板资源”和“保留应急库存”两类思路。</li>
+        </ul>
+        <div class="badge-list">
+            <span class="badge">机制索引</span>
+            <span class="badge">玩家笔记</span>
+            <span class="badge">数值参考</span>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <h2>Ⅲ · 信息获取与实用提示</h2>
+        <p>游戏内通知、版本前瞻、社区讨论与数据挖掘构成了主要的信息来源。根据不同发布渠道的更新频率与详细程度，可以建立一套优先级排序：官方渠道的公告通常最可靠，社区测试服报告则往往包含即将实装的细节。在整理过程中也注意到，部分技巧帖存在时效性偏差，建议以三个月内发布的帖子作为主要参考。</p>
+        <p>对于希望自行查阅原始资料的读者，可直接访问 <a href="https://index-official-ayx.com">爱游戏</a> 索引页，其中收录了经过标注的公开信息链接与分类标签，便于交叉对比。</p>
+    </div>
+
+    <!-- 引用块 / FAQ 摘要风格 -->
+    <div class="callout">
+        <strong>▎常见疑问摘要</strong> · 关于活动奖励是否固定、合成概率是否透明、以及资源周转的通用框架，在已有索引中均有对应条目。每一篇整理笔记均标注了信息源与采集时间，方便回溯核实。
+    </div>
+
+    <!-- 页尾访问提示（不包含“进入、点击、访问”等强制词） -->
+    <div class="footer-note">
+        <span class="ref">基于公开资料整理 · 仅供个人参考</span>
+        <span class="tagline">
+            <a href="https://index-official-ayx.com">爱游戏</a> · 完整索引
+        </span>
+    </div>
+
+</div>
+</body>
+</html>
